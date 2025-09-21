@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Đề</title>
+
+  <!-- SEO cơ bản -->
+  <meta name="description" content="Ôn Luyện Đánh Giá Tư Duy Miễn Phí TSA chất lượng cao, cập nhật liên tục cùng Box Star.">
+  <meta name="keywords" content="TSA, Ôn luyện, Đánh giá tư duy, Box Star, ôn thi online, Box Đề">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Box Star">
+  <link rel="canonical" href="https://tsa.boxde.online/">
+
+  <!-- Open Graph cho mạng xã hội -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Box Đề - Đề hay cả Box">
+  <meta property="og:description" content="Ôn Luyện Đánh Giá Tư Duy Miễn Phí TSA chất lượng cao, cập nhật liên tục cùng Box Star.">
+  <meta property="og:url" content="https://tsa.boxde.online/">
+  <meta property="og:image" content="https://tsa.boxde.online/images/preview.png">
+  <meta property="og:site_name" content="Box Star">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Box Đề - Đề hay cả Box">
+  <meta name="twitter:description" content="Ôn Luyện Đánh Giá Tư Duy Miễn Phí TSA chất lượng cao, cập nhật liên tục cùng Box Star.">
+  <meta name="twitter:image" content="https://tsa.boxde.online/images/preview.png">
+
+  <!-- Icon và theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/icon.png">
+  <link rel="apple-touch-icon" href="./images/icon.png">
+  <meta name="theme-color" content="#cd1627">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    ::selection {
+      background: #ee8e97;
+      color: #fff;
+    }
+
+    ::-moz-selection {
+      background: #cd1627;
+      color: #fff;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      color: #1f1f1f;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("./images/bg.png") center/cover no-repeat;
+      filter: blur(6px);
+      transform: scale(1.04);
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: -1;
+    }
+
+    body.is-transitioning {
+      pointer-events: none;
+      cursor: progress;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 26px;
+      padding: 72px 72px 8px;
+      max-width: 900px;
+      width: calc(100% - 32px);
+      text-align: center;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(5px);
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card img {
+      width: min(320px, 100%);
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      transform-origin: center;
+    }
+
+    .logo-link img {
+      transition: transform 0.6s ease;
+    }
+
+    .logo-link img.logo-leave {
+      animation: logo-shrink-out 1.3s ease forwards;
+    }
+
+    @keyframes logo-shrink-out {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      60% {
+        transform: scale(0.7);
+        opacity: 0.95;
+      }
+      75% {
+        transform: scale(0.7);
+        opacity: 0.9;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+
+    .card h3,
+    .card h5 {
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+    }
+
+    .card h5 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #5a5a5a;
+    }
+
+    .tsa-countdown {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      align-items: flex-start;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .tsa-countdown .unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tsa-countdown .num {
+      background: #cd1627;
+      color: #fff;
+      font-weight: 900;
+      font-size: 54px;
+      line-height: 1;
+      padding: 20px 26px;
+      border-radius: 10px;
+      min-width: 90px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      -webkit-text-stroke: 1px #fff;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .tsa-countdown .label {
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #cd1627;
+    }
+
+    .card-note {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 5px;
+      padding-bottom: 4px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: #cd1627;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 16px rgba(205, 22, 39, 0.6), 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      white-space: nowrap;
+      align-self: center;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 28px rgba(205, 22, 39, 0.75), 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: calc(32px + env(safe-area-inset-top)) 16px calc(48px + env(safe-area-inset-bottom));
+        overflow-y: auto;
+      }
+
+      .card {
+        padding: 56px 36px 16px;
+        max-width: 520px;
+        gap: 24px;
+        border-radius: 24px;
+      }
+
+      .card img {
+        width: 220px;
+      }
+
+      .card h3 {
+        font-size: 1.18rem;
+      }
+
+      .card h5 {
+        font-size: 1rem;
+      }
+
+      .cta-button {
+        padding: 14px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: calc(24px + env(safe-area-inset-top)) 12px calc(36px + env(safe-area-inset-bottom));
+      }
+
+      .card {
+        padding: 40px 24px 14px;
+        gap: 22px;
+        border-radius: 22px;
+      }
+
+      .card img {
+        width: 160px;
+      }
+
+      .card h3 {
+        font-size: 1.02rem;
+      }
+
+      .card h5 {
+        font-size: 0.95rem;
+      }
+
+      .tsa-countdown {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .tsa-countdown .unit {
+        flex: 1 1 92px;
+      }
+
+      .tsa-countdown .num {
+        font-size: 34px;
+        padding: 12px 16px;
+        min-width: auto;
+        width: 100%;
+      }
+
+      .tsa-countdown .label {
+        font-size: 13px;
+        margin-top: 4px;
+      }
+
+      .cta-button {
+        width: 100%;
+        padding: 14px;
+        white-space: normal;
+        align-self: stretch;
+      }
+
+      .card-note {
+        font-size: 0.8rem;
+        margin-top: 8px;
+        padding-bottom: 2px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .card {
+        padding: 32px 20px 12px;
+      }
+
+      .card img {
+        width: 140px;
+      }
+
+      .card h3 {
+        font-size: 0.98rem;
+      }
+
+      .card h5 {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <a class="logo-link" href="https://tsa.boxde.online/">
+      <img src="./images/logo.png" alt="Box Star Logo">
+    </a>
+    <h3>N&#7873;n t&#7843;ng &Ocirc;n luy&#7879;n &#272;&aacute;nh Gi&aacute; T&#432; Duy TSA mi&#7877;n ph&iacute;, ch&#7845;t l&#432;&#7907;ng, c&#7853;p nh&#7853;t li&ecirc;n t&#7909;c</h3>
+    <h5>&#272;&#7870;M NG&#431;&#7906;C NG&#192;Y THI CH&#205;NH TH&#7912;C TSA &#272;&#7906;T 1 2026 - NG&#192;Y 24/01/2026</h5>
+    <div class="tsa-countdown" data-target="2026-01-26T08:30:00+07:00" role="timer" aria-live="polite">
+      <div class="unit">
+        <div class="num" id="months">00</div>
+        <div class="label">TH&Aacute;NG</div>
+      </div>
+      <div class="unit">
+        <div class="num" id="days">00</div>
+        <div class="label">NG&Agrave;Y</div>
+      </div>
+      <div class="unit">
+        <div class="num" id="hours">00</div>
+        <div class="label">GI&#7900;</div>
+      </div>
+    </div>
+    <a class="cta-button" href="https://tsa.boxde.online/">Xem ngay</a>
+    <span class="card-note">&copy; 2025 Box Star</span>
+  </main>
+  <script>
+    (function () {
+      const widgets = document.querySelectorAll('.tsa-countdown[data-target]');
+      if (!widgets.length) return;
+
+      const dayMs = 24 * 60 * 60 * 1000;
+      const hourMs = 60 * 60 * 1000;
+
+      const pad = (n) => (n < 10 ? "0" + n : "" + n);
+
+      const addMonths = (date, months) => {
+        const d = new Date(date.getTime());
+        const day = d.getDate();
+        d.setDate(1);
+        d.setMonth(d.getMonth() + months);
+        const lastDay = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+        d.setDate(Math.min(day, lastDay));
+        return d;
+      };
+
+      const diffAsMonthsDaysHours = (from, to) => {
+        if (to <= from) return { months: 0, days: 0, hours: 0 };
+        let months = 0;
+        let cursor = new Date(from.getTime());
+        while (true) {
+          const next = addMonths(cursor, 1);
+          if (next <= to) {
+            months++;
+            cursor = next;
+          } else {
+            break;
+          }
+        }
+        const msLeft = to - cursor;
+        const days = Math.floor(msLeft / dayMs);
+        const hours = Math.floor((msLeft % dayMs) / hourMs);
+        return { months, days, hours };
+      };
+
+      widgets.forEach((widget) => {
+        const targetIso = widget.getAttribute('data-target');
+        const monthsEl = widget.querySelector('#months');
+        const daysEl = widget.querySelector('#days');
+        const hoursEl = widget.querySelector('#hours');
+        if (!targetIso || !monthsEl || !daysEl || !hoursEl) return;
+        const targetDate = new Date(targetIso);
+
+        const render = () => {
+          const now = new Date();
+          const { months, days, hours } = diffAsMonthsDaysHours(now, targetDate);
+          monthsEl.textContent = pad(months);
+          daysEl.textContent = pad(days);
+          hoursEl.textContent = pad(hours);
+        };
+
+        render();
+        setInterval(render, 60 * 1000);
+      });
+    })();
+
+    (function () {
+      const logoLink = document.querySelector('.logo-link');
+      const logoImg = logoLink ? logoLink.querySelector('img') : null;
+      if (!logoImg) return;
+
+      const navLinks = document.querySelectorAll('.logo-link, .cta-button');
+      let isNavigating = false;
+
+      const navigate = (href) => {
+        window.location.href = href;
+      };
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          const href = link.getAttribute('href');
+          if (!href) return;
+          event.preventDefault();
+          if (isNavigating) return;
+          isNavigating = true;
+
+          document.body.classList.add('is-transitioning');
+          logoImg.classList.remove('logo-leave');
+          void logoImg.offsetWidth;
+          logoImg.classList.add('logo-leave');
+
+          const handleAnimationEnd = () => {
+            logoImg.removeEventListener('animationend', handleAnimationEnd);
+            navigate(href);
+          };
+
+          logoImg.addEventListener('animationend', handleAnimationEnd);
+          setTimeout(() => navigate(href), 1700);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
