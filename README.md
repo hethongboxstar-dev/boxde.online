@@ -1,1 +1,1 @@
-Landing Page of boxde.online
+Landing Page of boxde.online by Chat GPT
